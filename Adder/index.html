@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html ng-app = "app1">
+<head>
+	<title>Adder</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js">
+	</script>
+	<script src = "./adder.js"></script>
+</head>
+<body ng-controller = "adderController" ng-init = "number = 0">
+	<div>
+		{{number}}
+	</div>
+	<div ng-click = "increment()" style = "cursor:pointer">
+		Increment
+	</div>
+
+</body>
+</html>
