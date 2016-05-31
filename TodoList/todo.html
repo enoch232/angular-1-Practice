@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app = "todoList">
+<head>
+	<title>ToDoList</title>
+	<script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
+	<script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	<script src = "./todo.js"></script>
+	<link rel = "stylesheet" type = "text/css" href = "./todo.css" />
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<div id = "todo-container">
+		<h1>Todo List</h1>
+		<div id = "first-page">
+			<div>
+				<input type = "text" id = "title" />
+				<div id = "make-btn">
+					Make
+				</div>
+				<div id = "todo-holder" ng-controller = "todoController">
+					<div ng-repeat = "todo in todos" ng-bind = "todo">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id = "second-page">
+		</div>
+		<div id = "third-page">
+		</div>
+	</div>
+
+</body>
+</html>
