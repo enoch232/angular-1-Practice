@@ -11,14 +11,14 @@
 <body>
 	<div id = "todo-container">
 		<h1>Todo List</h1>
-		<div id = "first-page">
+		<div id = "first-page" ng-controller = "todoController">
 			<div>
-				<input type = "text" id = "title" />
-				<div id = "make-btn">
+				<input type = "text" id = "title" ng-model = "todoInput" />
+				<div id = "make-btn" ng-click = "addTodo()">
 					Make
 				</div>
-				<div id = "todo-holder" ng-controller = "todoController">
-					<div ng-repeat = "todo in todos" ng-bind = "todo">
+				<div id = "todo-holder">
+					<div ng-repeat = "todo in todos" ng-bind = "todo.title">
 					</div>
 				</div>
 			</div>
