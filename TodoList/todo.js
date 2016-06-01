@@ -23,9 +23,7 @@ todoList.controller('todoController',function($scope,$http){
 			url: "http://localhost:3000/api/todos/"+id,
 			data: {title: title, finished: true}
 		});
-		$scope.$apply(function(){
-			$scope.getTodos();
-		});
+
 	};
 	$scope.unfinishTodo = function(id, title){
 		$.ajax({
