@@ -17,21 +17,23 @@ todoList.controller('todoController',function($scope,$http){
 		$("#title").focus();
 		$scope.getTodos();
 	};
-	$scope.finishTodo = function(id, title){
+	$scope.finishTodo = function(todo){
 		$.ajax({
 			type: "PUT",
-			url: "http://localhost:3000/api/todos/"+id,
-			data: {title: title, finished: true}
+			url: "http://localhost:3000/api/todos/"+todo._id,
+			data: {title: todo.title, finished: true}
 		});
+		todo.finished = true;
 
 	};
-	$scope.unfinishTodo = function(id, title){
+	$scope.unfinishTodo = function(todo){
 		$.ajax({
 			type: "PUT",
-			url: "http://localhost:3000/api/todos/"+id,
-			data: {title: title, finished: false}
+			url: "http://localhost:3000/api/todos/"+todo._id,
+			data: {title: todo.title, finished: false}
 		});
-		$scope.getTodos();
+		todo.finished = false;
+
 	};
 	var init = function(){
 		$scope.getTodos();
