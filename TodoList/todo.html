@@ -19,10 +19,10 @@
 				</div>
 				<div id = "todo-holder">
 					<div ng-repeat = "todo in todos" ng-hide = "todo.finished" style = "cursor:pointer" ng-click = "finishTodo(todo._id, todo.title)">
-						{{todo.title}} + {{todo._id}}
+						{{todo.title}}
 					</div>
 					<div ng-repeat = "todo in todos" ng-if = "todo.finished" style = "cursor:pointer;text-decoration:line-through" ng-click = "unfinishTodo(todo._id, todo.title)">
-						{{todo.title}} + {{todo._id}}
+						{{todo.title}}
 					</div>
 				</div>
 			</div>
