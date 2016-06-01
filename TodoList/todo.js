@@ -25,6 +25,14 @@ todoList.controller('todoController',function($scope,$http){
 		});
 		$scope.getTodos();
 	};
+	$scope.unfinishTodo = function(id, title){
+		$.ajax({
+			type: "PUT",
+			url: "http://localhost:3000/api/todos/"+id,
+			data: {title: title, finished: false}
+		});
+		$scope.getTodos();
+	};
 	var init = function(){
 		$scope.getTodos();
 	};
