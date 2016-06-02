@@ -14,35 +14,37 @@ body{
 	height:200px;
 }
 #first-page{
-	position:absolute;
-	top:30%;
-	left:35%;
+	position:relative;
+	margin: 0 auto;
 	width:400px;
 	height:250px;
 	background-color:white;
 	z-index:1000;
 	border:1px solid black;
+	box-shadow: 5px 5px 10px -10px black;
 }
 #second-page{
-	position: absolute;
-	top:31%;
-	left:34.5%;
+	position: relative;
+	margin: -245px auto;
+	left:5px;
 	width:400px;
 	height:250px;
 	background-color:white;
 	z-index:999;
 	border:1px solid black;
+	box-shadow: 5px 5px 10px -10px black;
 
 }
 #third-page{
-	top:32%;
-	left:34%;
-	position: absolute;
+	margin: -245px auto;
+	position: relative;
 	width:400px;
 	height:250px;
+	left:10px;
 	background-color:white;
 	z-index:998;
 	border:1px solid black;
+	box-shadow: 5px 5px 10px -2px black;
 
 }
 #title{
