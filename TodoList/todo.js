@@ -2,7 +2,7 @@ var todoList = angular.module('todoList',[]);
 todoList.controller('todoController',function($scope,$http){
 	$scope.todos;
 	$scope.getTodos = function(){
-		$http.get("http://localhost:3000/api/todos").success(function(response){
+		$http.get("https://nodetodolistapi.herokuapp.com/").success(function(response){
 			$scope.todos = response;
 		});
 	};
@@ -10,7 +10,7 @@ todoList.controller('todoController',function($scope,$http){
 		$scope.todos.push({title: $scope.todoInput});
 		$.ajax({
 			type: "POST",
-			url: "http://localhost:3000/api/todos",
+			url: "https://nodetodolistapi.herokuapp.com/",
 			data: {title: $scope.todoInput}
 		});
 		$scope.todoInput = "";
@@ -20,16 +20,15 @@ todoList.controller('todoController',function($scope,$http){
 	$scope.finishTodo = function(todo){
 		$.ajax({
 			type: "PUT",
-			url: "http://localhost:3000/api/todos/"+todo._id,
+			url: "https://nodetodolistapi.herokuapp.com/"+todo._id,
 			data: {title: todo.title, finished: true}
 		});
 		todo.finished = true;
-
 	};
 	$scope.unfinishTodo = function(todo){
 		$.ajax({
 			type: "PUT",
-			url: "http://localhost:3000/api/todos/"+todo._id,
+			url: "https://nodetodolistapi.herokuapp.com/"+todo._id,
 			data: {title: todo.title, finished: false}
 		});
 		todo.finished = false;

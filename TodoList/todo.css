@@ -1,12 +1,13 @@
 body{
 	font-family: 'Open Sans', sans-serif;
-	background-color:green;
+	background-color:#e5e5e5;
 	text-align:center;
 }
 #todo-container{
 	text-align:center;
 }
 #todo-holder{
+	margin-top:3rem;
 	text-align:left;
 	padding-left:1rem;
 	overflow: auto;
@@ -20,7 +21,7 @@ body{
 	height:250px;
 	background-color:white;
 	z-index:1000;
-	border:2px solid black;
+	border:1px solid black;
 }
 #second-page{
 	position: absolute;
@@ -30,7 +31,7 @@ body{
 	height:250px;
 	background-color:white;
 	z-index:999;
-	border:2px solid black;
+	border:1px solid black;
 
 }
 #third-page{
@@ -41,13 +42,13 @@ body{
 	height:250px;
 	background-color:white;
 	z-index:998;
-	border:2px solid black;
+	border:1px solid black;
 
 }
 #title{
 	height:2rem;
 	font-size:2rem;
-	width:70%;
+	width:73%;
 	float:left;
 	display:inline-block;
 }
@@ -55,11 +56,9 @@ body{
 	border-radius: 0.3rem;
 	text-align:center;
 	display:inline-block;
-	margin:0.1rem;
 	width:25%;
-	padding:0.2rem;
-	font-size:1.5rem;
-	float:left;
-	background-color:#18A689;
+	font-size:2rem;
+	float:right;
+	background-color:#e5e5e5;
 	font-family: 'Open Sans', sans-serif;
 }

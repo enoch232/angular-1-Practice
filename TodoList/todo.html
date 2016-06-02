@@ -17,13 +17,13 @@
 				<div id = "make-btn" ng-click = "addTodo()">
 					Make
 				</div>
-				<div id = "todo-holder">
-					<div ng-repeat = "todo in todos" ng-hide = "todo.finished" style = "cursor:pointer" ng-click = "finishTodo(todo)">
-						{{todo.title}}
-					</div>
-					<div ng-repeat = "todo in todos" ng-if = "todo.finished" style = "cursor:pointer;text-decoration:line-through" ng-click = "unfinishTodo(todo)">
-						{{todo.title}}
-					</div>
+			</div>
+			<div id = "todo-holder">
+				<div ng-repeat = "todo in todos" ng-hide = "todo.finished" style = "cursor:pointer" ng-click = "finishTodo(todo)">
+					{{todo.title}}
+				</div>
+				<div ng-repeat = "todo in todos" ng-if = "todo.finished" style = "cursor:pointer;text-decoration:line-through" ng-click = "unfinishTodo(todo)">
+					{{todo.title}}
 				</div>
 			</div>
 		</div>
